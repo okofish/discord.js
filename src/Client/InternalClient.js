@@ -90,7 +90,7 @@ export default class InternalClient {
 			var startTime = Date.now();
 			var ret = request[method](url);
 			if (useAuth) {
-				ret.set("authorization", self.token);
+				ret.set("authorization", "Bot " + self.token);
 			}
 			if (file) {
 				ret.attach("file", file.file, file.name);
